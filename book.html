@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Kill a Mockingbird - Vallejo Public Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content"><h1>Vallejo Public Library</h1></div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for books...">
+            <button type="submit" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <nav>
+        <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('show')">
+            ☰ Menu
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="account.html">My Account</a></li>
+        </ul>
+    </nav>
+    
+    <p class="breadcrumb">
+        <a href="index.html">Home</a> &gt; 
+        <a href="catalog.html">Catalog</a> &gt; 
+        To Kill a Mockingbird
+    </p>
+    
+    <main>
+        <article class="book">
+            <figure>
+                <img src="images/book.jpg" alt="Book cover of To Kill a Mockingbird">
+            </figure>
+            
+            <h2>To Kill a Mockingbird</h2>
+            <p class="author">by Harper Lee</p>
+            
+            <section>
+                <h3>Description</h3>
+                <p>Set in the small Southern town of Maycomb, Alabama, during the Depression, To Kill a Mockingbird follows three years in the life of 8-year-old Scout Finch, her brother, Jem, and their father, Atticus—three years punctuated by the arrest and eventual trial of a young black man accused of raping a white woman. Though her story explores big themes, Harper Lee chooses to tell it through the eyes of a child. The result is a tough and tender novel of race, class, justice, and the pain of growing up.</p>
+                
+                <p>Like the slow-moving occupants of her fictional town, Lee takes her time getting to the heart of her tale; we first meet the characters who will play their roles in the drama to come, and come to know them by their world. Atticus is a man of unshakeable integrity and love for his children; Jem and Scout are playful but kind, intelligent, but not yet adult; and Boo Radley is a mystery. The book is a classic coming-of-age story that has touched generations of readers and remains as relevant today as when it was first published.</p>
+            </section>
+            
+            <section>
+                <h3>Book Information</h3>
+                <dl>
+                    <dt>ISBN:</dt>
+                    <dd>978-0-06-112008-4</dd>
+                    
+                    <dt>Publisher:</dt>
+                    <dd>HarperCollins</dd>
+                    
+                    <dt>Publication Year:</dt>
+                    <dd>1960</dd>
+                    
+                    <dt>Edition:</dt>
+                    <dd>50th Anniversary Edition</dd>
+                    
+                    <dt>Pages:</dt>
+                    <dd>324</dd>
+                    
+                    <dt>Language:</dt>
+                    <dd>English</dd>
+                    
+                </dl>
+            </section>
+
+            <section class="availability">
+                <h3>Availability</h3>
+                <dl>
+                    <dt>Status:</dt>
+                    <dd><strong>Available Now</strong></dd>
+                    
+                    <dt>Total Copies:</dt>
+                    <dd>5</dd>
+                    
+                    <dt>Available Copies:</dt>
+                    <dd>3</dd>
+                    
+                    <dt>On Hold:</dt>
+                    <dd>0</dd>
+                </dl>
+                <button onclick="reserveBook()">Reserve This Book</button>
+            </section>
+        </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Vallejo Public Library. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function reserveBook() {
+            // In a real application, these would be retrieved from session/database
+            const isLoggedIn = false;
+            const hasLibraryCard = false;
+            const availableCopies = 3;
+            const totalCopies = 5;
+            
+            // Check if user is logged in
+            if (!isLoggedIn) {
+                alert('Please log in or create an account to reserve books.\n\nYou will be redirected to the login page.');
+                window.location.href = 'account.html';
+                return;
+            }
+
+            // Check if book has available copies
+            if (availableCopies === 0) {
+                alert('Sorry, all copies of this book are currently checked out.\n\nYou can join the wait queue to be notified when a copy becomes available.');
+                return;
+            }
+            
+            // Check if user has a library card
+            if (!hasLibraryCard) {
+                alert('You need a library card to reserve books.\n\nYou will be redirected to apply for a library card.');
+                window.location.href = 'card.html';
+                return;
+            }
+            
+            // All checks passed - proceed to reservation confirmation
+            window.location.href = 'reserve-confirm.html?isbn=978-0-06-112008-4';
+        }
+    </script>
+</body>
+</html>

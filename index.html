@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallejo Public Library - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content"><h1>Vallejo Public Library</h1></div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for books...">
+            <button type="submit" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <nav>
+        <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('show')">
+            ☰ Menu
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="account.html">My Account</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="home">
+            <h2>Welcome</h2>
+            <p>The Vallejo John F Kennedy Library and its companion branch Springstowne Library are central parts of Vallejo’s public library system, serving the community as welcoming places for learning, reading, and connection. Operated as part of the Solano County Library network, these libraries offer free access to a wide range of books, digital resources, and educational programs for all ages.</p>
+            <figure>    
+                <img src="images/libphoto.jpeg" alt="Picture to the library">
+                <figcaption>A glimpse into the library. Photo copy right: John Doe.</figcaption>
+            </figure>    
+        </section>
+
+        <section>
+            <h2>Latest News</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <time datetime="2026-02-10">February 10, 2026</time>
+                    <h3>Summer Reading Program Registration Opens</h3>
+                    <p>Sign up now for our annual summer reading program! Prizes, activities, and reading challenges for all ages.</p>
+                    <a href="">Read more</a>
+                </article>
+                
+                <article class="news-item">
+                    <time datetime="2026-02-08">February 8, 2026</time>
+                    <h3>New Digital Collection Available</h3>
+                    <p>Access thousands of ebooks and audiobooks through our new partnership with Libby. Download the app today!</p>
+                    <a href="">Read more</a>
+                </article>
+                
+                <article class="news-item">
+                    <time datetime="2026-02-05">February 5, 2026</time>
+                    <h3>Children's Storytime Returns This Month</h3>
+                    <p>Join us every Wednesday at 10 AM for interactive storytelling sessions for ages 3-6.</p>
+                    <a href="">Read more</a>
+                </article>
+            </div>
+            <p class="more-news"><a href="news.html">View all news</a></p>
+        </section>
+        
+        <section>
+            <h2>Location and Hours</h2>
+            <address>
+                <strong>Vallejo Public Library</strong><br>
+                505 Santa Clara Street<br>
+                Vallejo, CA 94590<br>
+                Phone: (707) 648-4386
+            </address>
+            
+            <p></p>
+            <dl>
+                <dt>Monday - Thursday</dt>
+                <p>10:00 AM - 8:00 PM</p>
+            </dl>
+        </section>
+        
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Vallejo Public Library. All rights reserved.</p>
+    </footer>
+</body>
+</html>

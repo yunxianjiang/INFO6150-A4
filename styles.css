@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    color: #3A3A3A;
+    background: #F7F3E9;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3, h4, legend {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+header {
+    border-bottom: 2px solid #3A3A3A;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.search-box {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.search-box input {
+    padding: 1rem;
+    border: 1px solid #999;
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+    background: #fff;
+}
+
+.search-box button {
+    padding: 0.7rem 0.75rem;
+    background: #9CAF88;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box button:hover {
+    background: #88986f;
+}
+
+.search-box svg {
+    width: 20px;
+    height: 15px;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 1px solid #9CAF88;
+    padding-bottom: 0.5rem;
+}
+
+main h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+nav a {
+    font-family: 'Open Sans', sans-serif;
+    color: #3A3A3A;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #9CAF88;
+    text-decoration: underline;
+}
+
+main a, footer a, .breadcrumb a {
+    color: #9CAF88;
+    font-weight: 600;
+}
+
+main a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+main p {
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+article {
+    border-left: 3px solid #9CAF88;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+time {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.author {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.home img {
+    width: 100%;
+    border: 1px solid #9CAF88;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book figure {
+    float: left;
+    margin: 0 2rem 1rem 0;
+    max-width: 200px;
+}
+
+.book figure figcaption {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.info-box, .availability {
+    background: #fff;
+    border-left: 3px solid #9CAF88;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.availability {
+    clear: both;
+}
+
+.info-box h4, .availability h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    padding: 0;
+}
+
+.info-box ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+dl {
+    margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-left: 1.5rem;
+}
+
+.availability dt {
+    display: inline;
+}
+
+.availability dd {
+    display: inline;
+    margin-left: 0.5rem;
+}
+
+.availability dd::after {
+    content: "";
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #999;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    background: #fff;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.required {
+    color: #c00;
+}
+
+.checkbox-label {
+    display: inline;
+    font-weight: 400;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    background: #9CAF88;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #88986f;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.subjects {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.subjects li {
+    background: #9CAF88;
+    border: none;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.subjects a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.subjects a:hover {
+    text-decoration: underline;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.news-item {
+    border-left: 3px solid #9CAF88;
+    padding-left: 1rem;
+}
+
+.news-item h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.news-item time {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.news-item p {
+    margin-bottom: 0.75rem;
+}
+
+.news-item a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.more-news {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.more-news a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+footer {
+    border-top: 2px solid #3A3A3A;
+    padding-top: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .book figure {
+        max-width: 150px;
+        margin: 0 1.5rem 1rem 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.75rem 0;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+   .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: #fff;
+        border: 2px solid #9CAF88;
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        border-bottom: 1px solid #F7F3E9;
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+    }
+
+    nav a:hover {
+        background: #F7F3E9;
+        text-decoration: none;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .book figure {
+        float: none;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .search-box input {
+        font-size: 0.85rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    .info-box, .availability {
+        padding: 0.75rem;
+    }
+}
+
+/* Toggle sandwich back to nav bar */
+@media (min-width: 481px) {
+    .menu-toggle {
+        display: none !important;
+    }
+
+    nav ul {
+        display: flex !important;
+    }
+}
